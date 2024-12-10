@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Hunt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Element Hunt</h1>
+    <div class="clue-box">
+      <p id="clue">Click the element used in light bulbs!</p>
+    </div>
+    <div class="periodic-table" id="periodic-table">
+      <!-- Elements will be dynamically generated -->
+    </div>
+    <div class="game-info">
+      <p>Score: <span id="score">0</span></p>
+      <p>Lives: <span id="lives">3</span></p>
+      <p>Time Left: <span id="timer">30</span>s</p>
+    </div>
+    <button id="start-game">Start Game</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

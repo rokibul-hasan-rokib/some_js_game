@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #111, #333);
+    color: white;
+    text-align: center;
+}
+#library {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+.element {
+    padding: 10px 20px;
+    background: #444;
+    border-radius: 5px;
+    cursor: grab;
+    user-select: none;
+}
+#combination-area {
+    margin: 20px;
+    padding: 50px;
+    background: #222;
+    border: 2px dashed #555;
+    border-radius: 10px;
+}
+#result {
+    margin: 20px;
+    font-size: 1.5em;
+}
