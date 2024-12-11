@@ -138,7 +138,7 @@ const startGameBtn = document.getElementById("start-game");
 const correctSound = document.getElementById("correct-sound");
 const wrongSound = document.getElementById("wrong-sound");
 const levelUpSound = document.getElementById("level-up-sound");
-const congratulationsBtn = document.getElementById("congratulations-btn"); // The new button
+const congratulationsBtn = document.getElementById("congratulations-btn"); 
 
 function createTable() {
   periodicTable.innerHTML = ""; 
@@ -219,13 +219,12 @@ function levelUp() {
 
   playSound(levelUpSound);
   alert(`Congratulations! You've reached level ${level}!`);
-  congratulationsBtn.style.display = "block"; // Show the button
+  congratulationsBtn.style.display = "block"; 
   congratulationsBtn.addEventListener("click", proceedToNextLevel);
 }
 
 function proceedToNextLevel() {
-  congratulationsBtn.style.display = "none"; // Hide the button
-  nextClue(); // Move to the next clue
+  congratulationsBtn.style.display = "none"; 
 }
 
 function updateUI() {
