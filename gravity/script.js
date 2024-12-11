@@ -8,7 +8,7 @@ const combinations = {
     "earth+fire": "lava"
 };
 
-// Drag and drop logic
+
 elements.forEach(el => {
     el.draggable = true;
     el.addEventListener('dragstart', e => {
