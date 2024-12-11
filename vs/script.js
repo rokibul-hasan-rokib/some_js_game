@@ -122,7 +122,7 @@ const elements = [
 
 let score = 0;
 let lives = 3;
-let timer = 60; // Global countdown timer
+let timer = 60; 
 let level = 1;
 let currentClueIndex = 0;
 let gameInterval;
@@ -141,7 +141,7 @@ const levelUpSound = document.getElementById("level-up-sound");
 const congratulationsBtn = document.getElementById("congratulations-btn"); // The new button
 
 function createTable() {
-  periodicTable.innerHTML = ""; // Clear the table
+  periodicTable.innerHTML = ""; 
   elements.forEach((element, index) => {
     const div = document.createElement("div");
     div.className = "element";
@@ -153,7 +153,7 @@ function createTable() {
 }
 
 function startGame() {
-  // Initialize game variables
+
   score = 0;
   lives = 3;
   level = 1;
@@ -177,7 +177,7 @@ function startGame() {
 
 function nextClue() {
   if (currentClueIndex >= elements.length) {
-    currentClueIndex = 0; // Reset if out of clues
+    currentClueIndex = 0; 
   }
   clueBox.textContent = elements[currentClueIndex].clue || "No clue available!";
 }
@@ -185,16 +185,16 @@ function nextClue() {
 function checkAnswer(e) {
   const selectedIndex = parseInt(e.target.dataset.index, 10);
   if (selectedIndex === currentClueIndex) {
-    // Correct answer
+
     playSound(correctSound);
     score += 10;
-    correctAnswers++; // Increment correct answers
+    correctAnswers++; 
     e.target.classList.add("correct");
   } else {
-    // Wrong answer
+  
     playSound(wrongSound);
     lives--;
-    score = Math.max(0, score - 5); // Ensure score does not go negative
+    score = Math.max(0, score - 5); 
     e.target.classList.add("wrong");
   }
   
@@ -208,17 +208,15 @@ function checkAnswer(e) {
     endGame();
   }
 
-  // Check if the player has completed enough correct answers to level up
-  if (correctAnswers >= 5) { // Example threshold for leveling up
+  if (correctAnswers >= 5) { 
     levelUp();
   }
 }
 
 function levelUp() {
-  level++; // Increase the level
-  correctAnswers = 0; // Reset correct answers for the new level
+  level++; 
+  correctAnswers = 0; 
 
-  // Show level-up message and congratulations button
   playSound(levelUpSound);
   alert(`Congratulations! You've reached level ${level}!`);
   congratulationsBtn.style.display = "block"; // Show the button
