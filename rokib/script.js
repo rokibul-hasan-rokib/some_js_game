@@ -1,4 +1,4 @@
-// script.js
+
 let elem = document.documentElement;
 if (elem.requestFullscreen) {
     elem.requestFullscreen();
@@ -12,10 +12,10 @@ const ctx = canvas
 const ctx1 = canvas1
     .getContext('2d');
 
-// Location of paddle
+
 let X, Y;
 
-// Location of all the obstacles
+
 let LOC = []
 let BALL_RADIUS = 15;
 let BALL_VX = 8;
