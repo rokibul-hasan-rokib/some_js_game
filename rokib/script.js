@@ -182,23 +182,23 @@ const ball = {
         this.x += this.vx;
         this.y += this.vy;
 
-        // Canvas left and right limit
+ 
         if (this.x + this.radius >= CANVAS_WIDTH
             || this.x - this.radius <= 0)
             this.vx = -this.vx;
 
-        // Canvas bottom
+
         if (this.y + this.radius >= CANVAS_HEIGHT) {
             this.vx = 0;
             this.vy = 0;
             FLAG = 1
         }
 
-        // Canvas top
+
         if (this.y - this.radius <= 0)
             this.vy = -this.vy;
 
-        // Detecting collision with paddle
+
         if ((this.x >= X) && (this.x <= X +
             PADDLE_WIDTH)
             && this.y + this.radius < CANVAS_HEIGHT
